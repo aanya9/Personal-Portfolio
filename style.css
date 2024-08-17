@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+/* Define keyframes for gradient animation */
+
+
+
+.container {
+    padding: 10px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 40px;
+    color: #fff;
+}
+
+span {
+    color: #d81b60;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    text-align: center;
+    color: #fff;
+}
+
+.header-text p {
+    font-size: 26px;
+}
+
+.header-text h1 {
+    font-size: 54px;
+    margin-top: 20px;
+}
+/* Add this CSS to your existing styles */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+#typing-effect {
+    display: inline-block;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink-caret .75s step-end infinite;
+}
+
+/* Add this to your style.css file or inside a <style> tag in your HTML head */
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.logo {
+    font-size: 40px;
+    color: #fff;
+    animation: bounce 2s infinite;
+}
+
+
+/* ----------------about--------------------- */
+
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.user {
+   
+    height: 550px;
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
+   
+    
+}
+/* Define keyframes for the animation */
+@keyframes userAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply the animation to the user class */
+.user {
+    height: 550px;
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
+    animation: userAnimation 5s infinite ease-in-out;
+}
+
+
+/* animations
+.about-col-1{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.about-col-1 img{
+height: 100%;
+position: absolute;
+left: 50%;
+bottom: 0;
+transform: translate(-50%);
+transition: bottom;
+transition: bottom 1s, left 1s;
+}
+
+.about-col-1:hover .shape{
+    bottom: 40px;
+}
+.about-col-1:hover .user{
+   left: 45%;
+} */
+
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-col-1 {
+    flex: 1 1 35%;
+}
+
+.about {
+    flex: 1 1 60%;
+}
+
+.subtitle {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.para {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.tab-titles {
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 2px solid #d81b60; */
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.tab-link {
+    font-size: 18px;
+    color: #d81b60;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #960e40;
+}
+
+.tab-links {
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 10px;
+    text-align: center;
+}
+
+.tab-links:hover {
+    color: #d81b60;
+}
+
+tab-contents ul li{
+    color: #ff004f;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* -------------services------------------ */
+#services{
+    padding: 30px 0;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div{
+    background:#262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s ;
+}
+
+.services-list div i{
+    font-size:50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* -----------------portfolio------------------ */
+
+#portfolio
+{
+    padding: 50px 0;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;  
+
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width:fit-content; 
+    border: 1px solid #ff004f;
+    padding: 14px 50px ;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+}
+.btn:hover{
+    background: #ff004f
+}
+
+/* ---------------contact------------------- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+   margin-top:30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color:#ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300px;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ff004f;
+
+}
+/* ------------css for small screen------------ */
+
+nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url('images/ph_bg.png');
+    }
+    .header-text {
+        margin-top: 100%; /* Consider adjusting this if needed */
+        font-size: 16px;
+    }
+    .header-text h1 {
+        font-size: 30px;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right:-200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        margin: 0; /* Add margin: 0 to reset any default margin */
+        list-style: none; /* Add list-style: none to remove default list styling */
+        z-index: 2;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    #sidemenu {
+        position: fixed;
+        right: -200px; /* Hidden off-screen */
+        width: 200px;
+        /* Add other styling as needed */
+        transition: right 0.5s; /* Smooth transition */
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left,.contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+/* #typing-effect {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+} */
+
